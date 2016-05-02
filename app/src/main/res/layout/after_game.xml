@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView4"
+        android:layout_alignParentStart="true"
+        android:visibility="visible">
+
+
+
+        <RelativeLayout
+            android:id="@+id/GameStatistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:id="@+id/TeamNames"
+                android:text="Tomas Hreha vs Tomas Hreha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/font_size"/>
+
+            <TextView
+                android:id="@+id/Score"
+                android:text="0:0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TeamNames"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/font_size"/>
+
+            <TextView
+                android:id="@+id/HalftimeScore"
+                android:text="0:0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Score"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/font_size"/>
+
+            <RelativeLayout
+                android:id="@+id/OfensiveStatistic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HalftimeScore"
+                android:paddingLeft="16dp"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Percentualne:"
+                    android:id="@+id/textView8"
+                    android:layout_below="@+id/textView10"
+                    android:layout_alignLeft="@+id/textView10"
+                    android:layout_alignStart="@+id/textView10"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uspesnost strelby: "
+                    android:id="@+id/textView9"
+                    android:layout_below="@+id/textView11"
+                    android:layout_alignLeft="@+id/textView11"
+                    android:layout_alignStart="@+id/textView11"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cas v utoku: "
+                    android:id="@+id/textView10"
+                    android:textSize="@dimen/font_size"
+                    android:layout_above="@+id/OfensiveTimePercent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pocet striel:"
+                    android:id="@+id/textView11"
+                    android:layout_below="@+id/textView8"
+                    android:layout_alignLeft="@+id/textView8"
+                    android:layout_alignStart="@+id/textView8"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stratene lopty:"
+                    android:id="@+id/textView12"
+                    android:layout_below="@+id/textView9"
+                    android:layout_alignLeft="@+id/textView9"
+                    android:layout_alignStart="@+id/textView9"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:id="@+id/OfensiveTime"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView9"
+                    android:layout_toEndOf="@+id/textView9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:id="@+id/OfensiveTimePercent"
+                    android:layout_below="@+id/OfensiveTime"
+                    android:layout_alignRight="@+id/OfensiveTime"
+                    android:layout_alignEnd="@+id/OfensiveTime"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/CountOfShots"
+                    android:layout_below="@+id/OfensiveTimePercent"
+                    android:layout_alignRight="@+id/OfensiveTime"
+                    android:layout_alignEnd="@+id/OfensiveTime"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:id="@+id/PercentsShots"
+                    android:layout_below="@+id/CountOfShots"
+                    android:layout_alignRight="@+id/CountOfShots"
+                    android:layout_alignEnd="@+id/CountOfShots"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/MissBals"
+                    android:layout_below="@+id/PercentsShots"
+                    android:layout_alignRight="@+id/PercentsShots"
+                    android:layout_alignEnd="@+id/PercentsShots"
+                    android:textSize="@dimen/font_size"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/DefensiveStatistic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp"
+                android:visibility="visible"
+                android:layout_alignTop="@+id/relativeLayout"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cas v obrane:"
+                    android:id="@+id/textView14"
+                    android:textSize="@dimen/font_size"
+                    android:layout_above="@+id/textView15"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Percentualne:"
+                    android:id="@+id/textView15"
+                    android:layout_alignTop="@+id/DefensiveTimePercent"
+                    android:layout_alignLeft="@+id/textView14"
+                    android:layout_alignStart="@+id/textView14"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plusove body:"
+                    android:id="@+id/textView16"
+                    android:layout_below="@+id/textView15"
+                    android:layout_alignLeft="@+id/textView15"
+                    android:layout_alignStart="@+id/textView15"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minusove body:"
+                    android:id="@+id/textView18"
+                    android:layout_below="@+id/textView16"
+                    android:layout_alignLeft="@+id/textView16"
+                    android:layout_alignStart="@+id/textView16"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:id="@+id/DefensiveTime"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/textView16"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:id="@+id/DefensiveTimePercent"
+                    android:layout_below="@+id/DefensiveTime"
+                    android:layout_alignRight="@+id/DefensiveTime"
+                    android:layout_alignEnd="@+id/DefensiveTime"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/PlusCount"
+                    android:layout_below="@+id/DefensiveTimePercent"
+                    android:layout_alignRight="@+id/DefensiveTimePercent"
+                    android:layout_alignEnd="@+id/DefensiveTimePercent"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/MinusCount"
+                    android:layout_below="@+id/PlusCount"
+                    android:layout_alignLeft="@+id/PlusCount"
+                    android:layout_alignStart="@+id/PlusCount"
+                    android:textSize="@dimen/font_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout"
+                android:layout_below="@+id/HalftimeScore"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/RedCardsCount"
+                    android:layout_below="@+id/YellowCardsCount"
+                    android:layout_toRightOf="@+id/textView22"
+                    android:layout_toEndOf="@+id/textView22"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2min tresty:"
+                    android:id="@+id/textView20"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/textView21"
+                    android:layout_alignStart="@+id/textView21"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zlte karty:"
+                    android:id="@+id/textView21"
+                    android:layout_below="@+id/textView20"
+                    android:layout_alignLeft="@+id/textView22"
+                    android:layout_alignStart="@+id/textView22"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cervene karty:"
+                    android:id="@+id/textView22"
+                    android:layout_below="@+id/textView21"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/YellowCardsCount"
+                    android:layout_below="@+id/FaulCount"
+                    android:layout_toRightOf="@+id/textView22"
+                    android:layout_toEndOf="@+id/textView22"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/FaulCount"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView22"
+                    android:layout_toEndOf="@+id/textView22"
+                    android:textSize="@dimen/font_size" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/GameRecordLayout"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/OfensiveStatistic">
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    tools:context=".SummaryPackage.Summary"
+    android:keepScreenOn="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/PlayersTable"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="true"
+                android:id="@+id/ListOfNumbers"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/ListOfNumbers"
+                android:layout_toEndOf="@+id/ListOfNumbers"
+                android:id="@+id/ListOfNames"></LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/ListOfNames">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/ListOfTimeOnPlayground"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListOfTimeOnPlayground"
+                        android:layout_toEndOf="@+id/ListOfTimeOnPlayground"
+                        android:id="@+id/ListPlayedGames"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPlayedGames"
+                        android:layout_toEndOf="@+id/ListPlayedGames"
+                        android:id="@+id/ListExploitation"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListExploitation"
+                        android:layout_toEndOf="@+id/ListExploitation"
+                        android:id="@+id/ListShotsPrediction"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListShotsPrediction"
+                        android:layout_toEndOf="@+id/ListShotsPrediction"
+                        android:id="@+id/ListGoalOnTarget"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListGoalOnTarget"
+                        android:layout_toEndOf="@+id/ListGoalOnTarget"
+                        android:id="@+id/ListShotMiss"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListShotMiss"
+                        android:layout_toEndOf="@+id/ListShotMiss"
+                        android:id="@+id/ListShotGoalkeeper"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListShotGoalkeeper"
+                        android:layout_toEndOf="@+id/ListShotGoalkeeper"
+                        android:id="@+id/ListFaulShotPrediction"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListFaulShotPrediction"
+                        android:layout_toEndOf="@+id/ListFaulShotPrediction"
+                        android:id="@+id/ListFaulShotGoal"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListFaulShotGoal"
+                        android:layout_toEndOf="@+id/ListFaulShotGoal"
+                        android:id="@+id/ListFaulGoalMiss"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListFaulGoalMiss"
+                        android:layout_toEndOf="@+id/ListFaulGoalMiss"
+                        android:id="@+id/ListReachFaulShot"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListReachFaulShot"
+                        android:layout_toEndOf="@+id/ListReachFaulShot"
+                        android:id="@+id/ListEfficientDefensive"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListEfficientDefensive"
+                        android:layout_toEndOf="@+id/ListEfficientDefensive"
+                        android:id="@+id/ListPlus"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPlus"
+                        android:layout_toEndOf="@+id/ListPlus"
+                        android:id="@+id/ListMinus"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListMinus"
+                        android:layout_toEndOf="@+id/ListMinus"
+                        android:id="@+id/ListFaul"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListFaul"
+                        android:layout_toEndOf="@+id/ListFaul"
+                        android:id="@+id/ListYellowCard"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListYellowCard"
+                        android:layout_toEndOf="@+id/ListYellowCard"
+                        android:id="@+id/ListRedCard"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListRedCard"
+                        android:layout_toEndOf="@+id/ListRedCard"
+                        android:id="@+id/ListReachBall"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListReachBall"
+                        android:layout_toEndOf="@+id/ListReachBall"
+                        android:id="@+id/ListMissBall"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListMissBall"
+                        android:layout_toEndOf="@+id/ListMissBall"
+                        android:id="@+id/ListPredictionBrejk"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPredictionBrejk"
+                        android:layout_toEndOf="@+id/ListPredictionBrejk"
+                        android:id="@+id/ListBrejkGoal"></LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListBrejkGoal"
+                        android:layout_toEndOf="@+id/ListBrejkGoal"
+                        android:id="@+id/ListBrejkMiss"></LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListBrejkMiss"
+                        android:layout_toEndOf="@+id/ListBrejkMiss"
+                        android:id="@+id/ListBrejkGoalkeeper"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListBrejkGoalkeeper"
+                        android:layout_toEndOf="@+id/ListBrejkGoalkeeper"
+                        android:id="@+id/ListPredicitionWing"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPredicitionWing"
+                        android:layout_toEndOf="@+id/ListPredicitionWing"
+                        android:id="@+id/ListWingGoal"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListWingGoal"
+                        android:layout_toEndOf="@+id/ListWingGoal"
+                        android:id="@+id/ListWingMiss"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListWingMiss"
+                        android:layout_toEndOf="@+id/ListWingMiss"
+                        android:id="@+id/ListWingGoalkeeper"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListWingGoalkeeper"
+                        android:layout_toEndOf="@+id/ListWingGoalkeeper"
+                        android:id="@+id/ListPrediction6m"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPrediction6m"
+                        android:layout_toEndOf="@+id/ListPrediction6m"
+                        android:id="@+id/List6mGoal"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List6mGoal"
+                        android:layout_toEndOf="@+id/List6mGoal"
+                        android:id="@+id/List6mMiss"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List6mMiss"
+                        android:layout_toEndOf="@+id/List6mMiss"
+                        android:id="@+id/List6mGoalkeeper"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List6mGoalkeeper"
+                        android:layout_toEndOf="@+id/List6mGoalkeeper"
+                        android:id="@+id/ListPrediction7m"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPrediction7m"
+                        android:layout_toEndOf="@+id/ListPrediction7m"
+                        android:id="@+id/List7mGoal"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List7mGoal"
+                        android:layout_toEndOf="@+id/List7mGoal"
+                        android:id="@+id/List7mMiss"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List7mMiss"
+                        android:layout_toEndOf="@+id/List7mMiss"
+                        android:id="@+id/List7mGoalkeeper"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List7mGoalkeeper"
+                        android:layout_toEndOf="@+id/List7mGoalkeeper"
+                        android:id="@+id/ListPrediction9m"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPrediction9m"
+                        android:layout_toEndOf="@+id/ListPrediction9m"
+                        android:id="@+id/List9mGoal"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List9mGoal"
+                        android:layout_toEndOf="@+id/List9mGoal"
+                        android:id="@+id/List9mMiss"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List9mMiss"
+                        android:layout_toEndOf="@+id/List9mMiss"
+                        android:id="@+id/List9mGoalkeeper"></LinearLayout>
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/PlayersDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Meno Priezvisko"
+            android:id="@+id/PlayersName"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/BackToTable"
+            android:layout_centerHorizontal="true"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/PlayersName"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cas na palubovke:\nGoly:\nStrelecka uspesnost:\nChytene brankarom:\nStrely mimo:\nStratene lopty:\nZiskane sedmicky:\nPlusove body v obrane:\nMinusove body v obrane:\nFauly:\nZlte karty:\nCervene karty:"
+                    android:id="@+id/textView7"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hodnoty"
+                    android:id="@+id/Values"
+                    android:layout_toRightOf="@+id/textView7"
+                    android:paddingLeft="8dp"
+                    android:textSize="@dimen/font_size"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="&lt;- Tabulka hracou"
+            android:id="@+id/BackToTable"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+</RelativeLayout>

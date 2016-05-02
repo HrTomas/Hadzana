@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    tools:context=".SummaryPackage.Summary"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/DefensiveStatistic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/relativeLayout6">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z toho doma"
+            android:id="@+id/textView8"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView9"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prehry:"
+            android:id="@+id/textView9"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/LooseGames"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/LooseGamesHome"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/LooseGamesHome"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/LooseGames"
+            android:layout_alignStart="@+id/LooseGamesOut"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z toho vonku:"
+            android:id="@+id/textView59"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/LooseGamesOut"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignTop="@+id/textView59"
+            android:layout_toEndOf="@+id/textView59"
+            android:layout_marginStart="42dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/relativeLayout6"
+        android:layout_marginLeft="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/WinGamesOut"
+            android:layout_below="@+id/WinGamesHome"
+            android:layout_alignRight="@+id/WinGames"
+            android:layout_alignEnd="@+id/WinGames"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/WinGamesHome"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/WinGames"
+            android:layout_alignStart="@+id/WinGames"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/WinGames"
+            android:textSize="@dimen/font_size"
+            android:layout_marginRight="46dp"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView11"
+            android:layout_marginStart="42dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z toho doma:"
+            android:id="@+id/textView12"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView10"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z toho vonku:"
+            android:id="@+id/textView11"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView12"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vyhry:"
+            android:id="@+id/textView10"
+            android:textSize="@dimen/font_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout6"
+        android:minWidth="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/DrawGamesOut"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_marginStart="42dp"
+            android:layout_below="@+id/DrawGamesHome"
+            android:layout_toEndOf="@+id/textView67"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z toho vonku:"
+            android:id="@+id/textView67"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:singleLine="true"
+            android:inputType="text"
+            android:layout_below="@+id/DrawGamesHome"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/DrawGamesHome"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/DrawGames"
+            android:layout_alignEnd="@+id/DrawGamesOut"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z toho doma:"
+            android:id="@+id/textView65"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView60"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/DrawGames"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/DrawGamesHome"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remizy"
+            android:id="@+id/textView60"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView65"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,496 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    tools:context=".PlayGroundPackage.AfterGamePackage.AfterGameSumary"
+    android:visibility="visible"
+    android:keepScreenOn="true">
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tabspagerstatistic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/PlayersDetails"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:visibility="gone">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:text="Meno Priezvisko"-->
+    <!--android:id="@+id/PlayersName"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:textSize="@dimen/font_size"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Cas na palubovke:\nGoly:\nStrelecka uspesnost:\nChytene brankarom:\nStrely mimo:\nStratene lopty:\nZiskane sedmicky:\nPlusove body v obrane:\nMinusove body v obrane:\nFauly:\nZlte karty:\nCervene karty:"-->
+    <!--android:id="@+id/textView7"-->
+    <!--android:textSize="@dimen/font_size"-->
+    <!--android:layout_below="@+id/PlayersName"-->
+    <!--android:layout_centerInParent="true" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Hodnoty"-->
+    <!--android:id="@+id/Values"-->
+    <!--android:layout_below="@+id/PlayersName"-->
+    <!--android:layout_toRightOf="@+id/textView7"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:textSize="@dimen/font_size"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/GoalkeeperDetails"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:visibility="gone">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:text="Meno Priezvisko"-->
+    <!--android:id="@+id/GoalkeeperName"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:textSize="@dimen/font_size"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Cas na palubovke:\nInkasovane goly:\nChytene strely:\nUspesnost:\nDobre dlhe prihravky:\nZle dlhe prihravky:\nUspesnost dlhej prih.:\nDobre kratke prihravky:\nZle kratke prihravky:\nUspesnost kratkej prih.:\nChytene pokutove hody:\nNechytene pokutove hody:\nUspesnost pri pok. hodoch:"-->
+    <!--android:id="@+id/textView75"-->
+    <!--android:textSize="@dimen/font_size"-->
+    <!--android:layout_below="@+id/GoalkeeperName"-->
+    <!--android:layout_centerInParent="true" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Hodnoty"-->
+    <!--android:id="@+id/ValuesGoalkeeper"-->
+    <!--android:layout_below="@+id/GoalkeeperName"-->
+    <!--android:layout_toRightOf="@+id/textView75"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:textSize="@dimen/font_size"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/GameStatistic"-->
+    <!--android:layout_toRightOf="@+id/TableOfMatches"-->
+    <!--android:layout_toEndOf="@+id/TableOfMatches"-->
+    <!--android:id="@+id/Buttons">-->
+
+    <!--<Button-->
+    <!--style="?android:attr/buttonStyleSmall"-->
+    <!--android:layout_width="@dimen/width"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Hraci"-->
+    <!--android:id="@+id/ShowPlayers"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:textSize="@dimen/font_size"/>-->
+
+    <!--<Button-->
+    <!--style="?android:attr/buttonStyleSmall"-->
+    <!--android:layout_width="@dimen/width"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Zaznam"-->
+    <!--android:id="@+id/ShowGameRecord"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toLeftOf="@+id/ShowPlayers"-->
+    <!--android:layout_toStartOf="@+id/ShowPlayers"-->
+    <!--android:textSize="@dimen/font_size"/>-->
+
+    <!--<Button-->
+    <!--android:layout_width="@dimen/width"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Brankary"-->
+    <!--android:id="@+id/ShowGoalkeepers"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/ShowPlayers"-->
+    <!--android:layout_toEndOf="@+id/ShowPlayers"-->
+    <!--android:textSize="@dimen/font_size"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/Buttons"-->
+    <!--android:layout_centerHorizontal="true">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/GraphGameRecord"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:visibility="gone">-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/PlayersTable"-->
+    <!--android:layout_below="@+id/GraphGameRecord"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:visibility="gone" >-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="false"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:id="@+id/PlayersNumbers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/PlayersNumbers"-->
+    <!--android:layout_toEndOf="@+id/PlayersNumbers"-->
+    <!--android:id="@+id/PlayersNames"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/PlayersNames"-->
+    <!--android:layout_toEndOf="@+id/PlayersNames"-->
+    <!--android:id="@+id/TimeOnPlaygroundPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/TimeOnPlaygroundPlayers"-->
+    <!--android:layout_toEndOf="@+id/TimeOnPlaygroundPlayers"-->
+    <!--android:id="@+id/ShotsPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/ShotsPlayers"-->
+    <!--android:layout_toEndOf="@+id/ShotsPlayers"-->
+    <!--android:id="@+id/GoalsPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/GoalsPlayers"-->
+    <!--android:layout_toEndOf="@+id/GoalsPlayers"-->
+    <!--android:id="@+id/MissShotsPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/MissShotsPlayers"-->
+    <!--android:layout_toEndOf="@+id/MissShotsPlayers"-->
+    <!--android:id="@+id/CatchByGoalkPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/CatchByGoalkPlayers"-->
+    <!--android:layout_toEndOf="@+id/CatchByGoalkPlayers"-->
+    <!--android:id="@+id/PredictionOfShots"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/PredictionOfShots"-->
+    <!--android:layout_toEndOf="@+id/PredictionOfShots"-->
+    <!--android:id="@+id/MissBallsPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/MissBallsPlayers"-->
+    <!--android:layout_toEndOf="@+id/MissBallsPlayers"-->
+    <!--android:id="@+id/ReachFaulShotPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/ReachFaulShotPlayers"-->
+    <!--android:layout_toEndOf="@+id/ReachFaulShotPlayers"-->
+    <!--android:id="@+id/PlusPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/PlusPlayers"-->
+    <!--android:layout_toEndOf="@+id/PlusPlayers"-->
+    <!--android:id="@+id/MinusPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/MinusPlayers"-->
+    <!--android:layout_toEndOf="@+id/MinusPlayers"-->
+    <!--android:id="@+id/FaulsPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/FaulsPlayers"-->
+    <!--android:layout_toEndOf="@+id/FaulsPlayers"-->
+    <!--android:id="@+id/YellowCardsPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/YellowCardsPlayers"-->
+    <!--android:layout_toEndOf="@+id/YellowCardsPlayers"-->
+    <!--android:id="@+id/RedCardsPlayers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/RedCardsPlayers"-->
+    <!--android:layout_toEndOf="@+id/RedCardsPlayers"-->
+    <!--android:id="@+id/ReachBallsPlayers"></LinearLayout>-->
+    <!--</RelativeLayout>-->
+    <!--</ScrollView>-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/GoalkeepersTable"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:visibility="gone">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="false"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:id="@+id/GoalkeepersNumbers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/GoalkeepersNumbers"-->
+    <!--android:layout_toEndOf="@+id/GoalkeepersNumbers"-->
+    <!--android:id="@+id/GoalkeepersNames"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/GoalkeepersNames"-->
+    <!--android:layout_toEndOf="@+id/GoalkeepersNames"-->
+    <!--android:id="@+id/TimeOnPlaygroundGoalkeepers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/TimeOnPlaygroundGoalkeepers"-->
+    <!--android:layout_toEndOf="@+id/TimeOnPlaygroundGoalkeepers"-->
+    <!--android:id="@+id/RecoveredGoalsGoalkeepers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/RecoveredGoalsGoalkeepers"-->
+    <!--android:layout_toEndOf="@+id/RecoveredGoalsGoalkeepers"-->
+    <!--android:id="@+id/CatchShotsGoalkeepers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/CatchShotsGoalkeepers"-->
+    <!--android:layout_toEndOf="@+id/CatchShotsGoalkeepers"-->
+    <!--android:id="@+id/PredictionOfCathe"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/PredictionOfCathe"-->
+    <!--android:layout_toEndOf="@+id/PredictionOfCathe"-->
+    <!--android:id="@+id/GoodLongPassGoalkeepers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/GoodLongPassGoalkeepers"-->
+    <!--android:layout_toEndOf="@+id/GoodLongPassGoalkeepers"-->
+    <!--android:id="@+id/BadLongPassGoalkeepers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/BadLongPassGoalkeepers"-->
+    <!--android:layout_toEndOf="@+id/BadLongPassGoalkeepers"-->
+    <!--android:id="@+id/PredictionOfGoodLongPass"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/PredictionOfGoodLongPass"-->
+    <!--android:layout_toEndOf="@+id/PredictionOfGoodLongPass"-->
+    <!--android:id="@+id/GoodShortPassGoalkeepers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/GoodShortPassGoalkeepers"-->
+    <!--android:layout_toEndOf="@+id/GoodShortPassGoalkeepers"-->
+    <!--android:id="@+id/BadShortPassGoalkeepers"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/BadShortPassGoalkeepers"-->
+    <!--android:layout_toEndOf="@+id/BadShortPassGoalkeepers"-->
+    <!--android:id="@+id/PredictionOfGoodShortPass"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/PredictionOfGoodShortPass"-->
+    <!--android:layout_toEndOf="@+id/PredictionOfGoodShortPass"-->
+    <!--android:id="@+id/CatcheFaulShotGoalkeeper"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/CatcheFaulShotGoalkeeper"-->
+    <!--android:layout_toEndOf="@+id/CatcheFaulShotGoalkeeper"-->
+    <!--android:id="@+id/MissFaulShotGoalkeeper"></LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_toRightOf="@+id/MissFaulShotGoalkeeper"-->
+    <!--android:layout_toEndOf="@+id/MissFaulShotGoalkeeper"-->
+    <!--android:id="@+id/PredictionOfCatchFaulShot"></LinearLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</ScrollView>-->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tomas.hadzana">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddPlayers.AddPlayersToDatabase"></activity>
+        <activity android:name=".Game.PlayGround"></activity>
+        <activity
+            android:name=".Game.AfterGame.AfterGameSumary"
+            android:theme="@style/AppThemeActionBar">
+        </activity>
+        <activity
+            android:name=".Game.BeforGame.BeforGameActivity"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name=".Game.Tactics"></activity>
+        <activity
+            android:name=".Summary.Summary"
+            android:theme="@style/AppThemeActionBar">
+        </activity>
+        <activity
+            android:name=".History.HistoryGameFragment"
+            android:theme="@style/AppThemeActionBar">
+        </activity>
+        <activity android:name=".History.HistoryListOfMatches"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,1356 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:visibility="visible"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/HideEverything"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/centerTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/Ofensive"
+                android:text="Utok"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size"
+                android:background="#c9bbbbbb"
+                android:layout_marginRight="8dp">
+            </Button>
+
+            <Button
+                android:id="@+id/Defensive"
+                android:text="Obrana"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Ofensive"
+                android:textSize="@dimen/font_size"
+                android:background="#c9bbbbbb">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/CenterTable"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_below="@+id/centerTime"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/ShowAfterMatchStatistic">
+
+            <Chronometer
+                android:id="@+id/Time"
+                android:text="cas"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/font_size">
+            </Chronometer>
+
+            <RelativeLayout
+                android:id="@+id/teamsNames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Time">
+
+                <TextView
+                    android:id="@+id/HomeTeam"
+                    android:text="Sledovany"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/DoubleDots"
+                    android:layout_above="@+id/DoubleDotsGoals"
+                    android:layout_alignParentStart="true"
+                    android:gravity="right"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:id="@+id/DoubleDots"
+                    android:text=" : "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:id="@+id/HostTeam"
+                    android:text="Super"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/DoubleDots"
+                    android:layout_above="@+id/DoubleDotsGoals"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:id="@+id/HomeTeamCountOfGoals"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/DoubleDotsGoals"
+                    android:layout_below="@+id/HomeTeam"
+                    android:textSize="@dimen/font_size"/>
+
+                <TextView
+                    android:id="@+id/DoubleDotsGoals"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/DoubleDots"
+                    android:textSize="@dimen/font_size"/>
+                android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/HostTeamCountOfGoals"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/DoubleDotsGoals"
+                    android:layout_below="@+id/HostTeam"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/font_size"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#FF000000"
+                android:id="@+id/textView2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/teamsNames"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:id="@+id/HomeOrOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:layout_alignParentBottom="true">
+
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/radioGroup">
+
+                        <RadioButton android:id="@+id/Home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Doma"
+                            android:onClick="onRadioButtonClicked"
+                            android:textSize="@dimen/font_size"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="58dp"
+                            android:layout_below="@+id/Home"
+                            android:layout_centerHorizontal="true"
+                            android:checked="true" />
+
+                        <RadioButton android:id="@+id/Out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vonku"
+                            android:onClick="onRadioButtonClicked"
+                            android:textSize="@dimen/font_size"
+                            android:checked="false"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_below="@+id/radioGroup"
+                            android:layout_alignLeft="@+id/Out"
+                            android:layout_alignStart="@+id/Out"
+                            android:layout_marginTop="66dp" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/SomeData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <Chronometer
+                        android:id="@+id/OfensiveTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true">
+                    </Chronometer>
+
+                    <Chronometer
+                        android:id="@+id/DefensiveTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size"
+                        android:layout_below="@+id/OfensiveTime"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:visibility="gone">
+                    </Chronometer>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cas v utoku:"
+                        android:id="@+id/textView46"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="@dimen/font_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pocet striel:"
+                        android:id="@+id/textView47"
+                        android:layout_below="@+id/textView46"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="@dimen/font_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9"
+                        android:id="@+id/textView48"
+                        android:textSize="@dimen/font_size"
+                        android:layout_below="@+id/OfensiveTime"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stratene lopty:"
+                        android:id="@+id/textView49"
+                        android:layout_below="@+id/textView47"
+                        android:layout_toRightOf="@+id/DefensiveTime"
+                        android:layout_toEndOf="@+id/DefensiveTime"
+                        android:textSize="@dimen/font_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:id="@+id/textView50"
+                        android:layout_below="@+id/textView47"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="@dimen/font_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pocet trestov:"
+                        android:id="@+id/textView51"
+                        android:layout_below="@+id/textView49"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="@dimen/font_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:id="@+id/textView52"
+                        android:layout_alignBottom="@+id/textView51"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="@dimen/font_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Najlepsi strelec:"
+                        android:id="@+id/textView53"
+                        android:layout_below="@+id/textView51"
+                        android:layout_toRightOf="@+id/DefensiveTime"
+                        android:layout_toEndOf="@+id/DefensiveTime"
+                        android:textSize="@dimen/font_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView54"
+                        android:layout_below="@+id/textView53"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="@dimen/font_size"
+                        android:hint="Meno"
+                        android:text="Tomas Hreha"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Najlepsi obranca:"
+                        android:id="@+id/textView55"
+                        android:layout_below="@+id/textView54"
+                        android:layout_toRightOf="@+id/DefensiveTime"
+                        android:layout_toEndOf="@+id/DefensiveTime"
+                        android:textSize="@dimen/font_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView56"
+                        android:layout_below="@+id/textView55"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="@dimen/font_size"
+                        android:hint="Meno"
+                        android:text="Filip Hreha"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LeftSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:id="@+id/buttonLeftLeft"
+                android:text="Cislo hraca"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size"
+                android:visibility="visible"
+                android:background="#c9bbbbbb"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:id="@+id/buttonLeft"
+                android:text="Cislo hraca"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonLeftLeft"
+                android:textSize="@dimen/font_size"
+                android:visibility="visible"
+                android:background="#c9bbbbbb"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:id="@+id/buttonLeftCenter"
+                android:text="Cislo hraca"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonLeft"
+                android:textSize="@dimen/font_size"
+                android:visibility="visible"
+                android:background="#c9bbbbbb"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:id="@+id/buttonRightCenter"
+                android:text="Cislo hraca"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonLeftCenter"
+                android:textSize="@dimen/font_size"
+                android:visibility="visible"
+                android:background="#c9bbbbbb"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:id="@+id/buttonRight"
+                android:text="Cislo hraca"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonRightCenter"
+                android:textSize="@dimen/font_size"
+                android:visibility="visible"
+                android:background="#c9bbbbbb"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:id="@+id/buttonRightRight"
+                android:text="Cislo hraca"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonRight"
+                android:textSize="@dimen/font_size"
+                android:visibility="visible"
+                android:background="#c9bbbbbb"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:id="@+id/buttonGoalKeeper"
+                android:text="Brankar"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonRightRight"
+                android:textSize="@dimen/font_size"
+                android:background="#c9bbbbbb"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RedAndYellowCards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonYellowCard"
+                android:text="Zlta karta"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonRedCard"
+                android:text="Cervena karta"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonYellowCard"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RightSideDefensive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonPlus"
+                android:text="+"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonMinus"
+                android:text="-"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonPlus"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:id="@+id/ReachBall"
+                android:background="#c9bbbbbb"
+                android:text="Ziskana lopta"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonMinus"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonFaulDefensive"
+                android:text="2min trest"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ReachBall"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RightSideOfensive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="false">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonShotOnTarget"
+                android:text="Strela: Gol"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonShotMiss"
+                android:text="Strela: Mimo"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/buttonShotOnTarget"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonShotToGoalkeeper"
+                android:text="Strela: Brankar"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/buttonShotMiss"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonMissBall"
+                android:text="Stratena lopta"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/buttonShotToGoalkeeper"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonReachFaulShot"
+                android:text="Ziskana sedmicka"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/buttonMissBall"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonFaulOfensive"
+                android:text="2min trest"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/buttonReachFaulShot"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ResultFaulShot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="false">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/FaulShotGoal"
+                android:text="Premeneny pokutovy hod"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/FaulShotMiss"
+                android:text="Nepremeneny pokutovy hod"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/FaulShotGoal"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/GoalPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="false">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/BrejkGoal"
+                android:text="Brejk gol"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/GoalWing"
+                android:text="Gol kridlo"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/BrejkGoal"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/Goal6m"
+                android:text="Gol 6m"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/GoalWing"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/Goal7m"
+                android:text="Gol 7m"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Goal6m"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/Goal9m"
+                android:text="Gol 9m"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Goal7m"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/MissPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="false">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/BrejkMiss"
+                android:text="Brejk vedla"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/MissWing"
+                android:text="Kridlo vedla"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/BrejkMiss"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/Miss6m"
+                android:text="6m vedla"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/MissWing"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/Miss7m"
+                android:text="7m vedla"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Miss6m"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/Miss9m"
+                android:text="9m vedla"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Miss7m"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RightSideOpponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="false">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonShotMissOpponent"
+                android:text="Strela: Mimo"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/buttonFaulOpponent"
+                android:text="2min trest"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonShotMissOpponent"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp">
+            </Button>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ShowAfterMatchStatistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Taktika"
+                android:id="@+id/Tactics"
+                android:textSize="@dimen/font_size"
+                android:layout_toRightOf="@+id/Statistic"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Statistika"
+                android:id="@+id/Statistic"
+                android:textSize="@dimen/font_size"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/RedAndYellowCards"
+            android:id="@+id/GoalkeeperValues"
+            android:visibility="gone">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Dlha prihravka"
+                android:id="@+id/LongPass"
+                android:textSize="@dimen/font_size"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Chytena strela"
+                android:id="@+id/CatchShot"
+                android:textSize="@dimen/font_size"
+                android:layout_above="@+id/LongPass"
+                android:layout_alignLeft="@+id/LongPass"
+                android:layout_alignStart="@+id/LongPass"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Kratka prihravka"
+                android:id="@+id/ShortPass"
+                android:textSize="@dimen/font_size"
+                android:layout_below="@+id/LongPass"
+                android:layout_alignLeft="@+id/LongPass"
+                android:layout_alignStart="@+id/LongPass"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Sedmicka"
+                android:id="@+id/FaulShot"
+                android:textSize="@dimen/font_size"
+                android:layout_below="@+id/ShortPass"
+                android:layout_alignLeft="@+id/ShortPass"
+                android:layout_alignStart="@+id/ShortPass"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Inkasoval"
+                android:id="@+id/Goal"
+                android:textSize="@dimen/font_size"
+                android:layout_above="@+id/CatchShot"
+                android:layout_alignLeft="@+id/CatchShot"
+                android:layout_alignStart="@+id/CatchShot"
+                android:layout_marginBottom="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/GoodBadLongPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Dobra"
+                android:id="@+id/GoodLongPass"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Zla"
+                android:id="@+id/BadLongShot"
+                android:layout_below="@+id/GoodLongPass"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/GoodBadShortPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Dobra"
+                android:id="@+id/GoodShortPass"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Zla"
+                android:id="@+id/BadShortPass"
+                android:layout_below="@+id/GoodShortPass"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/CatchMissFaulShot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/CatchFaulShot"
+                android:text="Chytena"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Nechytena"
+                android:id="@+id/MissFaulShot"
+                android:layout_below="@+id/CatchFaulShot"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/GoalkeeperCatchPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/BrejkCatch"
+                android:text="Chyteny brejk"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:id="@+id/WingCatch"
+                android:text="Chytena kridlo"
+                android:layout_below="@+id/BrejkCatch"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Chytena 6m"
+                android:id="@+id/Catch6m"
+                android:layout_below="@+id/WingCatch"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Chytena 7m"
+                android:id="@+id/Catch7m"
+                android:layout_below="@+id/Catch6m"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Chytena 9m"
+                android:id="@+id/Catch9m"
+                android:layout_below="@+id/Catch7m"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/GoalkeeperRecoveredPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Nechyteny brejk"
+                android:id="@+id/BrejkRecovered"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Gol kridlo"
+                android:id="@+id/WingRecovered"
+                android:layout_below="@+id/BrejkRecovered"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Gol 6m"
+                android:id="@+id/Recovered6m"
+                android:layout_below="@+id/WingRecovered"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Gol 7m"
+                android:id="@+id/Recovered7m"
+                android:layout_below="@+id/Recovered6m"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:background="#c9bbbbbb"
+                android:text="Gol 9m"
+                android:id="@+id/Recovered9m"
+                android:layout_below="@+id/Recovered7m"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size"
+                android:layout_marginBottom="8dp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spat"
+            android:id="@+id/BackButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/NewGameInformation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editNewInformation"
+            android:hint="Nazov supera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/buttonConfirm"
+            android:layout_alignStart="@+id/buttonConfirm"
+            android:layout_alignRight="@+id/buttonConfirm"
+            android:layout_alignEnd="@+id/buttonConfirm" />
+
+        <Button
+            android:background="#c9bbbbbb"
+            android:id="@+id/buttonConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/editNewInformation"
+            android:layout_centerHorizontal="true"
+            android:text="Potvrdit zmenu"
+            android:layout_marginBottom="8dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutNewPlayerOnTheGround"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView45"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/textView45"
+            android:layout_toStartOf="@+id/textView45"
+            android:visibility="visible"
+            android:layout_below="@+id/Change">
+
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/textView38"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/textView38"
+                android:layout_alignEnd="@+id/textView38">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/PlayersOnPlayground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/textView38"
+                android:layout_alignStart="@+id/textView38">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/PlayersForChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/textView45"
+            android:layout_toEndOf="@+id/textView45"
+            android:visibility="visible"
+            android:layout_below="@+id/Change">
+
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/textView39"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/textView39"
+                android:layout_toStartOf="@+id/textView39"
+                android:id="@+id/relativeLayout4">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/scrollView">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/PlayersInLineUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/relativeLayout4"
+                android:layout_toEndOf="@+id/relativeLayout4">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/OfensiveFormations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp">
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vystriedat"
+            android:id="@+id/Change"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    tools:context=".SummaryPackage.Summary"
+    android:keepScreenOn="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/GoalkeepersTable"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:fillViewport="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="true"
+                android:id="@+id/ListGoalkeeperNumber"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/ListGoalkeeperNumber"
+                android:layout_toEndOf="@+id/ListGoalkeeperNumber"
+                android:id="@+id/ListGoalkeepersNames"></LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/ListGoalkeepersNames">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/ListTimeOnPlaygroundGoalkeepers"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListTimeOnPlaygroundGoalkeepers"
+                        android:layout_toEndOf="@+id/ListTimeOnPlaygroundGoalkeepers"
+                        android:id="@+id/RecoveredGoalsGoalkeepers"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/RecoveredGoalsGoalkeepers"
+                        android:layout_toEndOf="@+id/RecoveredGoalsGoalkeepers"
+                        android:id="@+id/ListInterventions"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListInterventions"
+                        android:layout_toEndOf="@+id/ListInterventions"
+                        android:id="@+id/ListPredictionOfCatch"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPredictionOfCatch"
+                        android:layout_toEndOf="@+id/ListPredictionOfCatch"
+                        android:id="@+id/ListCountCatch"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListCountCatch"
+                        android:layout_toEndOf="@+id/ListCountCatch"
+                        android:id="@+id/ListRecoveredGoals"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListRecoveredGoals"
+                        android:layout_toEndOf="@+id/ListRecoveredGoals"
+                        android:id="@+id/ListPredictionsFaulShot"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPredictionsFaulShot"
+                        android:layout_toEndOf="@+id/ListPredictionsFaulShot"
+                        android:id="@+id/ListCatchFaulShot"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListCatchFaulShot"
+                        android:layout_toEndOf="@+id/ListCatchFaulShot"
+                        android:id="@+id/ListMissFaulShot"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListMissFaulShot"
+                        android:layout_toEndOf="@+id/ListMissFaulShot"
+                        android:id="@+id/ListPredictionBrejkCatch"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPredictionBrejkCatch"
+                        android:layout_toEndOf="@+id/ListPredictionBrejkCatch"
+                        android:id="@+id/ListBrejkCatch"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListBrejkCatch"
+                        android:layout_toEndOf="@+id/ListBrejkCatch"
+                        android:id="@+id/ListBrejkRecovered"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListBrejkRecovered"
+                        android:layout_toEndOf="@+id/ListBrejkRecovered"
+                        android:id="@+id/ListPredictionWingCatch"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPredictionWingCatch"
+                        android:layout_toEndOf="@+id/ListPredictionWingCatch"
+                        android:id="@+id/ListWingCatch"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListWingCatch"
+                        android:layout_toEndOf="@+id/ListWingCatch"
+                        android:id="@+id/ListWingRecovered"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListWingRecovered"
+                        android:layout_toEndOf="@+id/ListWingRecovered"
+                        android:id="@+id/ListPrediction6m"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPrediction6m"
+                        android:layout_toEndOf="@+id/ListPrediction6m"
+                        android:id="@+id/List6mCatch"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List6mCatch"
+                        android:layout_toEndOf="@+id/List6mCatch"
+                        android:id="@+id/List6Recovered"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List6Recovered"
+                        android:layout_toEndOf="@+id/List6Recovered"
+                        android:id="@+id/ListPrediction7m"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPrediction7m"
+                        android:layout_toEndOf="@+id/ListPrediction7m"
+                        android:id="@+id/List7mCacth"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List7mCacth"
+                        android:layout_toEndOf="@+id/List7mCacth"
+                        android:id="@+id/List7mRecovered"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List7mRecovered"
+                        android:layout_toEndOf="@+id/List7mRecovered"
+                        android:id="@+id/ListPrediction9m"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPrediction9m"
+                        android:layout_toEndOf="@+id/ListPrediction9m"
+                        android:id="@+id/List9mCatch"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List9mCatch"
+                        android:layout_toEndOf="@+id/List9mCatch"
+                        android:id="@+id/List9mRecovered"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/List9mRecovered"
+                        android:layout_toEndOf="@+id/List9mRecovered"
+                        android:id="@+id/ListPredictionOfLongPass"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPredictionOfLongPass"
+                        android:layout_toEndOf="@+id/ListPredictionOfLongPass"
+                        android:id="@+id/ListPassLongGood"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPassLongGood"
+                        android:layout_toEndOf="@+id/ListPassLongGood"
+                        android:id="@+id/ListPassLongBad"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPassLongBad"
+                        android:layout_toEndOf="@+id/ListPassLongBad"
+                        android:id="@+id/ListPredictionOfShortPass"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPredictionOfShortPass"
+                        android:layout_toEndOf="@+id/ListPredictionOfShortPass"
+                        android:id="@+id/ListPassShortGood"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPassShortGood"
+                        android:layout_toEndOf="@+id/ListPassShortGood"
+                        android:id="@+id/ListPassShortBad"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListPassShortBad"
+                        android:layout_toEndOf="@+id/ListPassShortBad"
+                        android:id="@+id/ListFaulGoalkeeper"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListFaulGoalkeeper"
+                        android:layout_toEndOf="@+id/ListFaulGoalkeeper"
+                        android:id="@+id/ListYellowCardGoalkeeper"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ListYellowCardGoalkeeper"
+                        android:layout_toEndOf="@+id/ListYellowCardGoalkeeper"
+                        android:id="@+id/ListRedCardGoalkeeper"></LinearLayout>
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/GoalkeeperDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Meno Priezvisko"
+            android:id="@+id/GoalkeeperName"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/BackToTable"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cas na palubovke:\nOdohrane zapasy:\nInkasovane goly:\nChytene strely:\nUspesnost:\nDobre dlhe prihravky:\nZle dlhe prihravky:\nUspesnost dlhej prih.:\nDobre kratke prihravky:\nZle kratke prihravky:\nUspesnost kratkej prih.:\nChytene pokutove hody:\nNechytene pokutove hody:\nUspesnost pri pok. hodoch:"
+            android:id="@+id/textView75"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/GoalkeeperName"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hodnoty"
+            android:id="@+id/ValuesGoalkeeper"
+            android:layout_below="@+id/GoalkeeperName"
+            android:layout_toRightOf="@+id/textView75"
+            android:paddingLeft="8dp"
+            android:textSize="@dimen/font_size"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="&lt;- Tabulka hracou"
+            android:id="@+id/BackToTable"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="8dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    tools:context=".SummaryPackage.Summary"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/OfensiveStatistic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uspesnost obrany:"
+            android:id="@+id/textView8"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView10"
+            android:layout_toStartOf="@+id/textView112"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cas v obrane:"
+            android:id="@+id/textView10"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView8"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:id="@+id/textView112"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:id="@+id/TimeInDefensive"
+            android:textSize="@dimen/font_size"
+            android:layout_above="@+id/textView8"
+            android:layout_toEndOf="@+id/textView112"
+            android:layout_marginStart="42dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plusove body:"
+            android:id="@+id/textView9"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView8"
+            android:layout_alignStart="@+id/textView8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minusove body:"
+            android:id="@+id/textView104"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView9"
+            android:layout_alignStart="@+id/textView9"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pomer:"
+            android:id="@+id/textView105"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView104"
+            android:layout_alignStart="@+id/textView104"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fauly:"
+            android:id="@+id/textView108"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView105"
+            android:layout_alignStart="@+id/textView105"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zlte karty:"
+            android:id="@+id/textView109"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView108"
+            android:layout_alignStart="@+id/textView108"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cervene karty:"
+            android:id="@+id/textView59"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView109"
+            android:layout_alignStart="@+id/textView109"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/PredictionOfDefensive"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/TimeInDefensive"
+            android:layout_alignEnd="@+id/TimeInDefensive"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfPlus"
+            android:textSize="@dimen/font_size"
+            android:layout_above="@+id/textView104"
+            android:layout_alignEnd="@+id/PredictionOfDefensive"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfMinus"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOfPlus"
+            android:layout_alignEnd="@+id/CountOfPlus"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/RatioPlusMinus"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOfMinus"
+            android:layout_alignEnd="@+id/CountOfMinus"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfFauls"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/RatioPlusMinus"
+            android:layout_alignEnd="@+id/RatioPlusMinus"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfYellowCards"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOfFauls"
+            android:layout_alignEnd="@+id/CountOfFauls"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfRedCards"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOfYellowCards"
+            android:layout_alignEnd="@+id/CountOfYellowCards"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

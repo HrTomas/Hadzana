@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    tools:context=".SummaryPackage.Summary"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/OfensiveStatistic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pocet utokov:"
+            android:id="@+id/textView8"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView10"
+            android:layout_alignStart="@+id/textView11"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cas v utoku:"
+            android:id="@+id/textView10"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vyuzite utoky:"
+            android:id="@+id/textView11"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView8"
+            android:layout_toStartOf="@+id/textView112"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:id="@+id/textView112"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:id="@+id/TimeInOfensive"
+            android:textSize="@dimen/font_size"
+            android:layout_above="@+id/textView8"
+            android:layout_toEndOf="@+id/textView112"
+            android:layout_marginStart="42dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfOfensive"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/TimeInOfensive"
+            android:layout_alignEnd="@+id/TimeInOfensive"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/WinOfensiveCount"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOfOfensive"
+            android:layout_alignEnd="@+id/CountOfOfensive"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/textView113"
+        android:layout_below="@+id/OfensiveStatistic"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OfensiveStatistic"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textView113"
+        android:id="@+id/relativeLayout7"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pocet striel:"
+            android:id="@+id/textView9"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uspesnost strelby:"
+            android:id="@+id/textView12"
+            android:layout_below="@+id/textView9"
+            android:layout_alignLeft="@+id/textView9"
+            android:layout_alignStart="@+id/textView9"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pocet striel 6m:"
+            android:id="@+id/textView104"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView12"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uspesnost strelby 6m:"
+            android:id="@+id/textView105"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/textView104"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pocet striel 9m:"
+            android:id="@+id/textView108"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView105"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uspesnost strelby 9m:"
+            android:id="@+id/textView109"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/textView108"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfShots"
+            android:textSize="@dimen/font_size"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView105"
+            android:layout_marginStart="42dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/PredictionOfShots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOfShots"
+            android:layout_alignEnd="@+id/CountOfShots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOf6mShots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/PredictionOfShots"
+            android:layout_alignEnd="@+id/PredictionOfShots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/PredictionOf6mShots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOf6mShots"
+            android:layout_alignEnd="@+id/CountOf6mShots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOf9mShots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/PredictionOf6mShots"
+            android:layout_alignEnd="@+id/PredictionOf6mShots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/PredictionOf9Shots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOf9mShots"
+            android:layout_alignEnd="@+id/CountOf9mShots"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OfensiveStatistic"
+        android:layout_toEndOf="@+id/textView113"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pocet striel kridlo:"
+            android:id="@+id/textView59"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uspesnost striel kridlo:"
+            android:id="@+id/textView60"
+            android:layout_below="@+id/textView59"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pocet striel 7m:"
+            android:id="@+id/textView106"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView60"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uspesnost strelby 7m:"
+            android:id="@+id/textView107"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/textView106"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pocet brejkov:"
+            android:id="@+id/textView110"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView107"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uspesnost brejkov:"
+            android:id="@+id/textView111"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_below="@+id/textView110"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfWingShots"
+            android:textSize="@dimen/font_size"
+            android:layout_marginStart="42dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView60"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/PredictionOfWingShots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOfWingShots"
+            android:layout_alignEnd="@+id/CountOfWingShots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOf7mShots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/PredictionOfWingShots"
+            android:layout_alignEnd="@+id/PredictionOfWingShots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/PredictionOf7mShots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOf7mShots"
+            android:layout_alignEnd="@+id/CountOf7mShots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/CountOfBrejks"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/PredictionOf7mShots"
+            android:layout_alignEnd="@+id/PredictionOf7mShots"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/PredictionOfBrejkShots"
+            android:textSize="@dimen/font_size"
+            android:layout_below="@+id/CountOfBrejks"
+            android:layout_alignEnd="@+id/CountOfBrejks"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout7"
+        android:layout_centerHorizontal="true">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Table">
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

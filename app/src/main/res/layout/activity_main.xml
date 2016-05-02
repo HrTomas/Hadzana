@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:padding="0dp"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp">
+
+    <RelativeLayout
+        android:id="@+id/WelcomScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/Turnaments"
+        android:layout_toEndOf="@+id/Turnaments"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/Turnaments"
+        android:focusable="false">
+
+        <Button
+            android:id="@+id/AddPlayersGlobal"
+            android:text="Súpiska"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/textView92"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/Turnament"
+            android:layout_toStartOf="@+id/Turnament"/>
+
+        <Button
+            android:id="@+id/FreeMatch"
+            android:text="Volna hra"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView92"
+            android:layout_toStartOf="@+id/Turnament"/>
+
+        <Button
+            android:gravity="center"
+            android:id="@+id/Turnament"
+            android:text="Turnaj"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/height"
+            android:textSize="@dimen/font_size"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/GameOptionsGlobal"
+            android:layout_alignTop="@+id/AddPlayersGlobal"/>
+
+        <Button
+            android:id="@+id/MatchHistoryGlobal"
+            android:text="Historia"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_toRightOf="@+id/Turnament"
+            android:layout_above="@+id/textView92"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/Turnament"
+            android:focusableInTouchMode="false" />
+
+        <Button
+            android:id="@+id/SummaryGlobal"
+            android:text="Statistika"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_toRightOf="@+id/Turnament"
+            android:layout_below="@+id/textView92"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/MatchHistoryGlobal"
+            android:layout_alignEnd="@+id/MatchHistoryGlobal"/>
+
+        <Button
+            android:id="@+id/GameOptionsGlobal"
+            android:text="Nastavenia"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:textSize="@dimen/font_size"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/Turnament"
+            android:layout_alignStart="@+id/Turnament"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/textView92"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/Turnaments">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView44"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/textView44"
+            android:layout_alignEnd="@+id/textView44">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size"
+                android:text="Turnaje"
+                android:id="@+id/textView57"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView5"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView57"
+                android:layout_above="@+id/buttonNewTurnament">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ListOfTurnaments"></LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size"
+                android:text="Novy turnaj"
+                android:id="@+id/buttonNewTurnament"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/textView44"
+            android:layout_toEndOf="@+id/textView44">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:id="@+id/NewTurnament">
+
+                <EditText
+                    android:id="@+id/TurnamentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nazov turnaja"
+                    android:textSize="@dimen/font_size"/>
+
+                <Button
+                    android:id="@+id/InsertTurnament"
+                    android:text="Vlozit turnaj"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/TurnamentName" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MenuForTurnament"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_below="@+id/NewTurnament"
+                android:layout_alignParentStart="true"
+                android:background="#79125cfc">
+
+                <Button
+                    android:id="@+id/AddPlayers"
+                    android:text="Súpiska"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="@dimen/height"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignEnd="@+id/MatchStatistics"
+                    android:layout_alignBottom="@+id/StartMatch"
+                    android:layout_below="@+id/InvisiblButton"/>
+
+                <Button
+                    android:id="@+id/StartMatch"
+                    android:text="Zápas"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="@dimen/height"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView95"
+                    android:layout_above="@+id/Quit"
+                    android:layout_below="@+id/InvisiblButton"/>
+
+                <Button
+                    android:id="@+id/GameOptions"
+                    android:text="Nastavenia"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="visible"/>
+
+                <Button
+                    android:id="@+id/MatchStatistics"
+                    android:text="Historia"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="@dimen/height"
+                    android:textSize="@dimen/font_size"
+                    android:layout_above="@+id/GameOptions"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/textView95"
+                    android:layout_below="@+id/textView96"/>
+
+                <Button
+                    android:id="@+id/Quit"
+                    android:text="Statistika"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="@dimen/height"
+                    android:textSize="@dimen/font_size"
+                    android:layout_above="@+id/GameOptions"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView95"
+                    android:layout_below="@+id/textView96"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView95"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:id="@+id/textView96"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView95" />
+
+                <Button
+                    android:id="@+id/InvisiblButton"
+                    android:text=""
+                    android:layout_width="@dimen/width"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:visibility="invisible"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/textView97"
+                    android:layout_alignBottom="@+id/InvisiblButton"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

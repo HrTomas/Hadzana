@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.tomas.handballstatistic.BeforGameActivity">
+
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:id="@+id/textView114"
+        android:layout_centerHorizontal="true"
+        android:background="#6a6a6a"
+        android:layout_below="@+id/StartGame"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textView114"
+        android:layout_below="@+id/StartGame">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView116"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="#6a6a6a"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView116"
+            android:paddingLeft="8dp"
+            android:layout_alignParentBottom="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView10"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size"
+                        android:text="Zakladna zostava:"
+                        android:id="@+id/MainFormation"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_below="@+id/MainFormation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ListMainFormation"></LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView116"
+            android:paddingLeft="8dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView11"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:textSize="@dimen/font_size"
+                        android:text="Supiska:"
+                        android:id="@+id/Roster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/Roster"
+                        android:id="@+id/ListRoster"></LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/textView115"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textView114"
+        android:background="#6a6a6a"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/textView115"
+        android:layout_alignBottom="@+id/textView115"
+        android:layout_below="@+id/StartGame">
+
+        <TextView
+            android:textSize="@dimen/font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meno oponenta:"
+            android:id="@+id/textView118"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/OpponentName"
+            android:layout_alignBottom="@+id/textView118"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView118"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/OpponentName"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:textSize="@dimen/font_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meno tymu:"
+                android:id="@+id/textView119"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TeamName"
+                android:layout_alignBottom="@+id/textView119"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView119"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView118"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:textSize="@dimen/font_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dlzka zapasu:"
+                android:id="@+id/textView120"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/TimeForMatch"
+                android:layout_alignBottom="@+id/textView120"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView120"
+                android:hint="v minutach."/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView115"
+        android:layout_toEndOf="@+id/textView114">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView117"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="#6a6a6a"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/textView117">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView12"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp">
+
+                    <TextView
+                        android:text="Brankar:"
+                        android:textSize="@dimen/font_size"
+                        android:id="@+id/MainGoalkeeper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/MainGoalkeeper"
+                        android:id="@+id/GoalkeeperForStart"></LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView117">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView13"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size"
+                        android:text="Supiska brankarov:"
+                        android:id="@+id/TextGoalkeeper"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/TextGoalkeeper"
+                        android:id="@+id/RosterGoalkeeper"></LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:textSize="@dimen/font_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zacat zapas"
+        android:id="@+id/StartGame"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

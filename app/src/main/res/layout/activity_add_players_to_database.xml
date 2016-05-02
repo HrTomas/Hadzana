@@ -1,0 +1,468 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    tools:context="com.example.tomas.naostro.AddPlayersToDatabase"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/PlayersLayout">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView40"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/textView40"
+            android:id="@+id/TableOfPlayersAndGoalkeepers"
+            android:layout_toLeftOf="@+id/textView40">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:id="@+id/textView41"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hraci:"
+                android:id="@+id/textView42"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/font_size"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brankary:"
+                android:id="@+id/textView43"
+                android:layout_alignTop="@+id/textView41"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/font_size"/>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView2"
+                android:layout_below="@+id/textView42"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/textView41"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:fillViewport="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/PlayersNumbers"
+                        android:paddingRight="8dp"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/PlayersNumbers"
+                        android:layout_toEndOf="@+id/PlayersNumbers"
+                        android:id="@+id/PlayersNames"></LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView3"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView43">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/GoalkeepersNumbers"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/GoalkeepersNumbers"
+                        android:layout_toEndOf="@+id/GoalkeepersNumbers"
+                        android:id="@+id/GoalkeepersNames"></LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/textView40"
+            android:visibility="visible"
+            android:id="@+id/NewPlayerOrNewOfensiveFormation"
+            android:layout_toRightOf="@+id/textView40">
+
+            <Button
+                android:id="@+id/buttonNewPlayer"
+                android:text="Nový hráč"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size"
+                android:text="Nový útok"
+                android:id="@+id/NewLineUp"
+                android:layout_below="@+id/buttonNewPlayer"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/InsertPlayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_toEndOf="@+id/textView40"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView40">
+
+            <EditText
+                android:id="@+id/TurnamentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Krstné meno"
+                android:textSize="@dimen/font_size"/>
+
+            <EditText
+                android:id="@+id/PlayersSecondName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TurnamentName"
+                android:hint="Priezvisko"
+                android:textSize="@dimen/font_size"/>
+
+            <EditText
+                android:id="@+id/edittextPlayersNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PlayersSecondName"
+                android:hint="Číslo hráča"
+                android:textSize="@dimen/font_size"
+                android:numeric="integer" />
+
+            <Button
+                android:id="@+id/buttonInsertPlayer"
+                android:text="Vložiť hráča"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size"
+                android:layout_below="@+id/edittextPlayersNumber"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Novy brankar"
+                android:id="@+id/NewGoalkeeper"
+                android:textSize="@dimen/font_size"
+                android:layout_below="@+id/edittextPlayersNumber"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Import"
+                android:id="@+id/ImportPlayers"
+                android:layout_below="@+id/buttonInsertPlayer"
+                android:layout_alignLeft="@+id/buttonInsertPlayer"
+                android:layout_alignStart="@+id/buttonInsertPlayer"
+                android:textSize="@dimen/font_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/TableOfPlayersAndGoalkeepers"
+            android:layout_toEndOf="@+id/TableOfPlayersAndGoalkeepers"
+            android:id="@+id/GlobalPlayers"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/textView58"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/textView58">
+
+                <TextView
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hraci z globalnej supisky:"
+                    android:id="@+id/textView64"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/scrollView6"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView64">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:id="@+id/ListOfGlobalPlayersNumbers"
+                            android:paddingRight="8dp"></LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/ListOfGlobalPlayersNumbers"
+                            android:layout_toEndOf="@+id/ListOfGlobalPlayersNumbers"
+                            android:id="@+id/ListOfGlobalPlayersNames"></LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView58"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:textSize="@dimen/font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brankari z globalnej supisky:"
+                    android:id="@+id/textView66"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/scrollView7"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView66">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:id="@+id/ListOfGlobalGoalkeepersNumbers"></LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/ListOfGlobalGoalkeepersNumbers"
+                            android:layout_toEndOf="@+id/ListOfGlobalGoalkeepersNumbers"
+                            android:id="@+id/ListOfGlobalGoalkeepersNames"></LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:id="@+id/OfensiveFormationLayout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TableOfPlayers"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_toLeftOf="@+id/NewOrEditLineUp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ListOfPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/TableOfLineUps"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentTop="false"
+            android:layout_toRightOf="@+id/NewOrEditLineUp"
+            android:layout_toEndOf="@+id/NewOrEditLineUp"
+            android:layout_centerVertical="true">
+
+            <ScrollView
+                android:id="@+id/ScrollViewLineUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ListOfLineUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/NewOrEditLineUp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <EditText
+                android:id="@+id/LineUpName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size"
+                android:hint="Nazov utoku"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/center"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/LayoutForLineUp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/center"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:id="@+id/InsertLineUpButton"
+                android:text="Vlozit Utok"
+                android:textSize="@dimen/font_size"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
